@@ -43,7 +43,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -86,10 +86,10 @@ public class ListViewSample extends Application {
         @Override
         public void updateItem(String item, boolean empty) {
             super.updateItem(item, empty);
-            Rectangle rect = new Rectangle(100, 20);
+            Circle circ = new Circle(10);
             if (item != null) {
-                rect.setFill(Color.web(item));
-                setGraphic(rect);
+                circ.setFill(Color.web(item));
+                setGraphic(circ);
             } else {
                 setGraphic(null);
             }
